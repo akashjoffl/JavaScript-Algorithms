@@ -1,8 +1,21 @@
-function addTwoNumbers(num1, num2) {
-    return num1 + num2;
+function introduction(firstName, lastName) {
+    const introduction = "Hi, my name is " .concat(firstName, " ", lastName, ".");
+    return introduction;
 }
 
-console.log(addTwoNumbers(10, 0));
+// Write a function that takes in a string for your first name,
+// a string for your last name and returns them formatted in the example below.
 
-// Write a function that takes in two numbers and adds the numbers together
+
+function introduction2(firstName, lastName) {
+    const introduction = "Hi, my name is " + firstName + " " + lastName + ".";
+    return introduction;
+}
+
+function introduction3(firstName, lastName) {
+    return `Hi, my name is ${firstName} ${lastName}.`;
+}
+
+console.log(introduction3("Akash", "Jeganath"));
+
 
