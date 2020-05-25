@@ -1,21 +1,8 @@
-function introduction(firstName, lastName) {
-    const introduction = "Hi, my name is " .concat(firstName, " ", lastName, ".");
-    return introduction;
+function convertToF(a) {
+    const convertion = (((a * 9) / 5) + 32);
+    return convertion;  
 }
 
-// Write a function that takes in a string for your first name,
-// a string for your last name and returns them formatted in the example below.
+console.log(convertToF(-30));
 
-
-function introduction2(firstName, lastName) {
-    const introduction = "Hi, my name is " + firstName + " " + lastName + ".";
-    return introduction;
-}
-
-function introduction3(firstName, lastName) {
-    return `Hi, my name is ${firstName} ${lastName}.`;
-}
-
-console.log(introduction3("Akash", "Jeganath"));
-
-
+// Write a function that converts Celcius to Fahrenheit
