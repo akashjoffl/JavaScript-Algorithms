@@ -1,11 +1,5 @@
 function reverseString(word) {
-    let reverseWord = word.split("");
-    console.log(reverseWord);
-
-    reverseWord = reverseWord.reverse();
-    console.log(reverseWord);
-
-    reverseWord = reverseWord.join("");
+    let reverseWord = word.split("").reverse().join("");
     console.log(reverseWord);
 }
 
