@@ -1,12 +1,12 @@
-function reverseString(input) {
-    let splitString = input.split("");
-    console.log(splitString);
-    let reverseString = splitString.reverse();
-    console.log(reverseString);
-    let joingString = reverseString.join("");
-    console.log(joingString);
+function reverseString(word) {
+    let reverseWord = word.split("");
+    console.log(reverseWord);
 
-    return joingString
+    reverseWord = reverseWord.reverse();
+    console.log(reverseWord);
+
+    reverseWord = reverseWord.join("");
+    console.log(reverseWord);
 }
 
 console.log(reverseString('javascript'));
