@@ -1,14 +1,15 @@
-function factorializeNumber(num) {
-    let product = 1;
+function reverseString(input) {
+    let splitString = input.split("");
+    console.log(splitString);
+    let reverseString = splitString.reverse();
+    console.log(reverseString);
+    let joingString = reverseString.join("");
+    console.log(joingString);
 
-    for (let i = 1; i <= num; i++){
-        console.log(i);
-        console.log(product);
-        product = product * i;
-    }
-
-    return product;
+    return joingString
 }
 
-console.log(factorializeNumber(5));
-//console.log(1 * 2 * 3 * 4 * 5);
+console.log(reverseString('javascript'));
+console.log(reverseString("codegod"));
+
+//reversing a string
