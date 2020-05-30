@@ -1,6 +1,11 @@
 function reverseString(word) {
-    let reverseWord = word.split("").reverse().join("");
-    console.log(reverseWord);
+    let reverseWord = "";
+
+    for (let i = word.length - 1; i >= 0; i--) {
+        reverseWord += word[i];
+    }
+
+    return reverseWord;
 }
 
 console.log(reverseString('javascript'));
