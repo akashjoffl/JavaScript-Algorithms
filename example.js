@@ -3,9 +3,11 @@ function longestLength(str) {
     let strArray = str.split(" ");
     
     for (let i = 0; i < strArray.length; i++) {
-        if (longestLength < strArray[i].length) {
-            longestLength = strArray[i].length;
-        }
+        // if (longestLength < strArray[i].length) {
+        //     longestLength = strArray[i].length;
+        // }
+
+        longestLength = longestLength < strArray[i].length ? strArray[i].length : longestLength;
     }
 
     return longestLength;
