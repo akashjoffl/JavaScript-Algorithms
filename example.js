@@ -10,6 +10,14 @@ function longestLength(str) {
     return longestLength;
 }
 
-console.log(longestLength("I work for Google"));
+function longestLength2(str) {
+    let longestLength = str.split(" ").sort((word1, word2) => {
+        return word2.length - word1.length;
+    })[0].length;
+
+    return longestLength;
+}
+
+console.log(longestLength2("I work for Google"));
 
 //Longest Length
