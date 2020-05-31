@@ -1,11 +1,16 @@
-function isPalindrome(str) {
-    let forwardStr = str.toLowerCase().replace(/[\W_]/g, "");
-    let reversedStr = forwardStr.split("").reverse().join("");
+function longestLength(str) {
+    let longestLength = 0;
+    let strArray = str.split(" ");
+    
+    for (let i = 0; i < strArray.length; i++) {
+        if (longestLength < strArray[i].length) {
+            longestLength = strArray[i].length;
+        }
+    }
 
-    return forwardStr === reversedStr;
+    return longestLength;
 }
 
-console.log(isPalindrome('javaScri_ pt'));
-console.log(isPalindrome("momom"));
+console.log(longestLength("I work for Google"));
 
-//Palindrome
+//Longest Length
