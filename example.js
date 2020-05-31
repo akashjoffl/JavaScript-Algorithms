@@ -1,14 +1,11 @@
-function reverseString(word) {
-    let reverseWord = "";
+function isPalindrome(str) {
+    let forwardStr = str.toLowerCase().replace(/[\W_]/g, "");
+    let reversedStr = forwardStr.split("").reverse().join("");
 
-    for (let i = word.length - 1; i >= 0; i--) {
-        reverseWord += word[i];
-    }
-
-    return reverseWord;
+    return forwardStr === reversedStr;
 }
 
-console.log(reverseString('javascript'));
-console.log(reverseString("codegod"));
+console.log(isPalindrome('javaScri_ pt'));
+console.log(isPalindrome("momom"));
 
-//reversing a string
+//Palindrome
