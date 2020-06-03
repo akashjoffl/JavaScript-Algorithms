@@ -1,23 +1,22 @@
-function longestLength(str) {
-    let longestLength = 0;
-    let strArray = str.split(" ");
+function titleCase(str) {
+    let titleCasedSentence = str.split(" ");
+    //console.log(titleCasedSentence);
 
-    strArray.forEach((word) => {
-        //console.log(word);
-        longestLength = longestLength < word.length ? word.length : longestLength;
+    titleCasedSentence = titleCasedSentence.map((word) => {
+        const firstLetter = word.charAt(0).toUpperCase();
+
+        word = firstLetter.concat(word.slice(1, word.legth));
+
+        return word;
     });
 
-    return longestLength;
+    titleCasedSentence = titleCasedSentence.join(' ');
+
+    return titleCasedSentence;
+
 }
 
-function longestLength2(str) {
-    let longestLength = str.split(" ").sort((word1, word2) => {
-        return word2.length - word1.length;
-    })[0].length;
+console.log(titleCase("I am a coding goat"));
 
-    return longestLength;
-}
 
-console.log(longestLength2("I work for Google"));
-
-//Longest Length
+// titleCase
