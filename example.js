@@ -1,12 +1,5 @@
 function repeatString(str, num) {
-    let repeatString = "";
-
-    while (num > 0) {
-        repeatString = repeatString.concat(str);
-        num--;
-    }
-
-    return repeatString;
+    return str.repeat(num);
 }
 
 console.log(repeatString('codinggod', 2));
