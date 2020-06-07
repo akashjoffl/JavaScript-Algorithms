@@ -1,22 +1,15 @@
-function titleCase(str) {
-    let titleCasedSentence = str.split(" ");
-    //console.log(titleCasedSentence);
+function repeatString(str, num) {
+    let repeatString = "";
 
-    titleCasedSentence = titleCasedSentence.map((word) => {
-        const firstLetter = word.charAt(0).toUpperCase();
+    while (num > 0) {
+        repeatString = repeatString.concat(str);
+        num--;
+    }
 
-        word = firstLetter.concat(word.slice(1, word.legth));
-
-        return word;
-    });
-
-    titleCasedSentence = titleCasedSentence.join(' ');
-
-    return titleCasedSentence;
-
+    return repeatString;
 }
 
-console.log(titleCase("I am a coding goat"));
+console.log(repeatString('codinggod', 2));
 
 
-// titleCase
+// Repeat string
