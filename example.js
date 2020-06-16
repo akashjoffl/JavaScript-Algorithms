@@ -1,19 +1,22 @@
-function isValidTime(time) {
-    let timeArray = time.split(':');
+function missingNumber(numArr) {
+    let sortArray = numArr.sort((num1, num2) => {
+        return num1 - num2;
+    });
 
-    if (timeArray[0] > 23) {
-        return false;
-    } else if (timeArray[1] > 59) {
-        return false;
+    console.log(sortArray);
+
+    for(let i = 0; i < sortArray.length; i++) {
+        if (i !== sortArray[i]) {
+            return i;
+        }
     }
 
-    return true;
+    return sortArray;
+
 }
 
-console.log(isValidTime('24:00'));
-console.log(isValidTime('23:59'));
-console.log(isValidTime('12:40'));
-console.log(isValidTime('23:69'));
 
+console.log(missingNumber([0, 1, 3, 4, 5, 6, 7, 8, 9]));
+console.log(missingNumber([1, 2, 5, 6, 7, 9, 3, 4]));
 
-// validTime
+// missingNumber
