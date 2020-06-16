@@ -1,22 +1,20 @@
-function missingNumber(numArr) {
+function duplicateNumbers(numArr){
     let sortArray = numArr.sort((num1, num2) => {
         return num1 - num2;
     });
 
-    console.log(sortArray);
-
-    for(let i = 0; i < sortArray.length; i++) {
-        if (i !== sortArray[i]) {
-            return i;
+    for (let i = 0; i < sortArray.length; i++) {
+        if (sortArray[i] === sortArray[i + 1]){
+            return true;
         }
     }
 
-    return sortArray;
-
+    return false;
 }
 
 
-console.log(missingNumber([0, 1, 3, 4, 5, 6, 7, 8, 9]));
-console.log(missingNumber([1, 2, 5, 6, 7, 9, 3, 4]));
+console.log(duplicateNumbers([1, 2, 3, 1]));
+console.log(duplicateNumbers([3, 1]));
+console.log(duplicateNumbers([0, 4, 5, 0, 3, 6]));
 
-// missingNumber
+// duplicateNumbers
