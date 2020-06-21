@@ -1,20 +1,16 @@
-function duplicateNumbers(numArr){
-    let sortArray = numArr.sort((num1, num2) => {
-        return num1 - num2;
+function digitalSum(str) {
+    const nums = str.match(/\d+/g) || [];
+    let sum = 0;
+
+    nums.forEach((num) => {
+        sum += Number(num);
     });
 
-    for (let i = 0; i < sortArray.length; i++) {
-        if (sortArray[i] === sortArray[i + 1]){
-            return true;
-        }
-    }
-
-    return false;
+    return sum;
 }
 
+console.log(digitalSum('2 apples, 12 oranges'));
+console.log(digitalSum('12323440'));
+console.log(digitalSum('Your payment is declined'));
 
-console.log(duplicateNumbers([1, 2, 3, 1]));
-console.log(duplicateNumbers([3, 1]));
-console.log(duplicateNumbers([0, 4, 5, 0, 3, 6]));
-
-// duplicateNumbers
+// digitalSum
