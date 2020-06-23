@@ -1,17 +1,19 @@
-function firstDuplicate(numArray) { 
-    const duplicateObject = {};
+function amendTheSentence(str) {
+    let strArray = str.split("");
 
-    for (let num of numArray){
-        if(duplicateObject.hasOwnProperty(num)) {
-            return num;
-        }
-        duplicateObject[num] = num;
+    for (i = 0; i < strArray.length; i++) {
+        if (strArray[i] !== strArray[i].toLowerCase());
+        strArray[i] = strArray[i].toLowerCase();
+        strArray.splice(i, 0, ' ');
     }
-    return -1;
+
+    strArray = strArray.join("").trim("");
+
+    return strArray;
 }
 
-console.log(firstDuplicate([2, 3, 3, 1, 2]));
-console.log(firstDuplicate([2, 2]));
-console.log(firstDuplicate([2, 1, 3]));
 
-// firstDuplicate
+console.log(amendTheSentence('CodingGodDoesWorkSon'));
+console.log(amendTheSentence("Ain'tNoFunIfTheHomieDon'tCodeNone"));
+
+//amendTheSentence
