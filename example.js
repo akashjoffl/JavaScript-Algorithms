@@ -1,19 +1,18 @@
-function amendTheSentence(str) {
-    let strArray = str.split("");
+function sumAll(numArray) {
+    const min = Math.min(...numArray);
+    const max = Math.max(...numArray);
+    let sum = 0;
 
-    for (i = 0; i < strArray.length; i++) {
-        if (strArray[i] !== strArray[i].toLowerCase());
-        strArray[i] = strArray[i].toLowerCase();
-        strArray.splice(i, 0, ' ');
+    for (let i = min; i <= max; i++) {
+        sum += i;
     }
 
-    strArray = strArray.join("").trim("");
+    return sum;
 
-    return strArray;
 }
 
+console.log(sumAll([10, 5]));
+console.log(sumAll([3, 7]));
 
-console.log(amendTheSentence('CodingGodDoesWorkSon'));
-console.log(amendTheSentence("Ain'tNoFunIfTheHomieDon'tCodeNone"));
 
-//amendTheSentence
+//sumofDifference
